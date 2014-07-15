@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Working With Console</title>
+</head>
+<body>
+
+</body>
+    <script>
+
+        var specialConsole = (function () {
+
+            function format() {
+                var mainString = arguments[0];
+                for (var i = 0; i < arguments.length - 1; i++) {
+                    var reg = new RegExp("\\{" + i + "\\}", "gm");
+                    mainString = mainString.replace(reg, arguments[i + 1]);
+                }
+                return mainString;
+            }
+
+            this.writeLine = function () {
+                var result = format.apply(this, arguments);
+                console.log(result.toString());
+            }
+
+            this.writeError = function () {
+                var result = format.apply(this, arguments);
+                console.error(result.toString());
+            }
+
+            this.writeWarning = function () {
+                var result = format.apply(this, arguments);
+                console.warn(result.toString());
+            }
+
+            return {
+                writeLine: writeLine,
+                writeError: writeError,
+                writeWarning: writeWarning
+            };
+        })();
+
+        specialConsole.writeLine("Message");
+        specialConsole.writeLine("Message to {0} and {1}", "Pesho", "Gosho");
+        specialConsole.writeError("Vuii otide {0}", "Vsichko grumna");
+        specialConsole.writeWarning("Be carefull");
+	</script>
+</html>

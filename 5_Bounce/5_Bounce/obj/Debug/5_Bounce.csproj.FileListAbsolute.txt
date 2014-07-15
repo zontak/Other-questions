@@ -1,0 +1,5 @@
+C:\Users\Georgi\Desktop\javascriptAPIs\5_Bounce\5_Bounce\bin\5_Bounce.dll
+C:\Users\Georgi\Desktop\javascriptAPIs\5_Bounce\5_Bounce\bin\5_Bounce.pdb
+C:\Users\Georgi\Desktop\javascriptAPIs\5_Bounce\5_Bounce\obj\Debug\5_Bounce.csprojResolveAssemblyReference.cache
+C:\Users\Georgi\Desktop\javascriptAPIs\5_Bounce\5_Bounce\obj\Debug\5_Bounce.dll
+C:\Users\Georgi\Desktop\javascriptAPIs\5_Bounce\5_Bounce\obj\Debug\5_Bounce.pdb
